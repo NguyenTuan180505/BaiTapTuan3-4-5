@@ -1,31 +1,27 @@
-package Tuan2;
+package Tuan2.Tuan5;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Bai3 {
-    private int a;
-    private int b;
-    public void nhapHaiSoNguyen(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap a:");
-       this.a= sc.nextInt();
-System.out.println("Nhap b:");
-this.b= sc.nextInt();
+    private List arr = new ArrayList<>();
+    public void nhap() {
 
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap vao so phan tu");
+        n = sc.nextInt();
+        System.out.println("Nhap vao mang so nguyen");
+        for (int i = 0; i < n; i++) {
+            arr.add(sc.next());
+        }
     }
-    public int tong(){
-        return this.a+this.b;
-    }
-    public  int hieu(){
-        return this.a-this.b;
-    }
-    public int nhan(){
-        return this.a*this.b;
-    }
-    public double thuong(){
-        return this.a*1.0/this.b;
-    }
-    public double phanDu(){
-        return this.a*1.0 % this.b;
+    public List sortArrAsc(){
+        Collections.sort(arr);
+
+        return this.arr;
+
     }
 }
